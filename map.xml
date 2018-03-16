@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map proto="1.3.3">
   <name>gradient</name>
-  <version>1.1.1</version>
+  <version>1.2.0(β)</version>
   <!--
        更新履歴
        v1.0.0 2015/11/20
@@ -14,20 +14,35 @@
         観戦者spawn看板修正・xml修正
        v1.1.1 2015/12/7
         Authorの名前変更
+       v1.2.0(β) 2018/3/16
+        クラス・locale追加(動作テスト)
   -->
-  <objective>最後まで生き残れ！/Last one standing Wins!</objective>
+  <objective>Last one standing Wins!</objective>
   <authors>
     <author>t03y</author>
   </authors>
   <teams>
     <team color="gold" max="24">Tributes</team>
   </teams>
-  <kits>
-    <kit name="gold">
-      <potion duration="oo" amplifier="1">night_vision</potion>
-      <potion duration="oo" amplifier="0">JUMP</potion>
-    </kit>
-  </kits>
+
+  <classes sticky="true">
+    <class name="Normal" description="The normal class jumps normally." longdescription="You are given three Jump V potion." icon="ghast_tear">
+      <kit>
+        <potion duration="oo" amplifier="1">night_vision</potion>
+        <item slot="3" bind="true" locked="true" name="Jump Potion" damage="16386" potions="jump:5:5:false">potion</item>
+        <item slot="4" bind="true" locked="true" name="Jump Potion" damage="16386" potions="jump:5:5:false">potion</item>
+        <item slot="5" bind="true" locked="true" name="Jump Potion" damage="16386" potions="jump:5:5:false">potion</item>
+      </kit>
+    </class>
+    <class name="Jumper" description="The jumper class can fly high." longdescription="You are given Jump I effect and one Jump V potion." icon="feather">
+      <kit>
+        <potion duration="oo" amplifier="1">night_vision</potion>
+        <potion duration="oo" amplifier="0">JUMP</potion>
+        <item slot="4" bind="true" locked="true" name="Jump Potion" damage="16386" potions="jump:5:5:false">potion</item>
+      </kit>
+    </class>
+  </classes>
+
   <spawns>
     <spawn team="gold" yaw="180" kit="gold">
       <cuboid min="-2,32,2" max="2,32,-2"/>
@@ -36,8 +51,19 @@
       <cuboid min="-2,40,46" max="2,40,42"/>
     </default>
   </spawns>
+
   <timelock>on</timelock>
+
   <tntrun/>
+
+  <locale lang="ja_JP">
+    <string name="Last one standing Wins!" value="最後まで生き残れ！">
+    <string name="The normal class jumps normally." value="Normalクラスは通常のジャンプをします">
+    <string name="You are given three Jump V potion." value="跳躍力上昇5ポーションが3つ与えられます">
+    <string name="The jumper class can fly high." value="Jumperクラスは高く飛ぶことができます">
+    <string name="You are given Jump I effect and one Jump V potion." value="跳躍力上昇効果と跳躍力上昇5ポーションが1つ与えられます">
+  </locale>
+
   <include src="tutorial.xml"/>
   <tutorial>
     <stage title="TNT Run">
