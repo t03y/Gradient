@@ -57,11 +57,11 @@
   <tntrun/>
 
   <locale lang="ja_JP">
-    <string name="Last one standing Wins!" value="最後まで生き残れ！">
-    <string name="The normal class jumps normally." value="Normalクラスは通常のジャンプをします">
-    <string name="You are given three Jump V potion." value="跳躍力上昇5ポーションが3つ与えられます">
-    <string name="The jumper class can fly high." value="Jumperクラスは高く飛ぶことができます">
-    <string name="You are given Jump I effect and one Jump V potion." value="跳躍力上昇効果と跳躍力上昇5ポーションが1つ与えられます">
+    <string name="Last one standing Wins!" value="最後まで生き残れ！"/>
+    <string name="The normal class jumps normally." value="Normalクラスは通常のジャンプをします"/>
+    <string name="You are given three Jump V potion." value="跳躍力上昇5ポーションが3つ与えられます"/>
+    <string name="The jumper class can fly high." value="Jumperクラスは高く飛ぶことができます"/>
+    <string name="You are given Jump I effect and one Jump V potion." value="跳躍力上昇効果と跳躍力上昇5ポーションが1つ与えられます"/>
   </locale>
 
   <include src="tutorial.xml"/>
